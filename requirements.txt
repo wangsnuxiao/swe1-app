@@ -1,2 +1,4 @@
 gunicorn
 django-heroku
+python==3.7.4
+
