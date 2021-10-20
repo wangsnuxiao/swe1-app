@@ -29,7 +29,7 @@ jobs:
       - provider: script
         script: bash scripts/deploy.sh production
         on:
-          branch: main
+          branch: 
       - provider: script
         script: bash scripts/deploy.sh staging
         on:
