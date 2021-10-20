@@ -1,4 +1,5 @@
 gunicorn
+psycopg2-binary
 django-heroku
 whitenoise
 flake8
