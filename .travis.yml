@@ -9,6 +9,7 @@ before-install:
 script:
   - black --check .
   - flake8 --max-line-length=92
+  - python manage.py check
 
 
 after_success:
