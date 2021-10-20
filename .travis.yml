@@ -1,13 +1,15 @@
 language: python
 
-python:
-  - "3.7"
-
-env:
-  - SECRET_KEY='TEST'
-
-install:
-  -pipenv install
+before-install:
+  - pip install -r requirements.txt  #flake8 inside
+  - pip install black
+  - pip install coverage
+  - pip install coveralls
 
 script:
-  - python manage.py test
+  - black --check .
+  - flake8 --max-line-length=92
+
+
+after_success:
+  - coveralls
