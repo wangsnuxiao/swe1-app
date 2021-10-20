@@ -25,7 +25,7 @@ SECRET_KEY = '5lub*k%ub2kz@7dg=ezb3mye&gccv##gea-55%3$k)@kf!=r(#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['xuanhua-poll.herokuapp.com','']
+ALLOWED_HOSTS = ['xuanhua-poll.herokuapp.com','','localhost']
 
 
 # Application definition
@@ -44,11 +44,10 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    #'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
