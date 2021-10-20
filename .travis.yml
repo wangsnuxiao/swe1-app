@@ -6,7 +6,9 @@ before-install:
   - pip install coverage
   - pip install coveralls
 
-
+script:
+  - black --check .
+  - flake8 --max-line-length=92
 
 
 after_success:
