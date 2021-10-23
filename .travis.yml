@@ -9,6 +9,8 @@ before-install:
 script:
   - black --check .
   - flake8 --max-line-length=92
+  - python manage.py collectstatic
+  - coverage run --source='.' manage.py test
 
 
 after_success:
